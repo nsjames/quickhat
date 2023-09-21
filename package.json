@@ -1,0 +1,21 @@
+{
+  "name": "quickhat",
+  "version": "1.0.0",
+  "description": "A way to get setup with hardhat quicker",
+  "bin": "index.js",
+  "author": "Nathan James (nsjames)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nsjames/quickhat.git"
+  },
+  "keywords": [
+    "ethers", "ethereum", "hardhat", "quickhat"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "inquirer": "^9.2.11"
+  },
+  "engines": {
+    "node": ">=16.7.0"
+  }
+}
