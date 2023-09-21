@@ -10,7 +10,7 @@ npx quickhat
 
 ## Reason for this project
 
-I got fed up with how hardhat make you install dependencies manually in multiple waves
+I got fed up with how hardhat makes you install dependencies manually in multiple waves
 
 This CLI will:
 - Install all the required dependencies in one shot
@@ -19,3 +19,7 @@ This CLI will:
 - Add an EMPTY sample deployment script
 - Add a hardhat config with common network configurations
 - Set up proper .env private key management
+
+## Show love
+
+Come follow me on [Twitter](https://twitter.com/nsjames_) and say hi!
