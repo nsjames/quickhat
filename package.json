@@ -1,6 +1,6 @@
 {
   "name": "quickhat",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A way to get setup with hardhat quicker",
   "bin": "index.js",
   "author": "Nathan James (nsjames)",

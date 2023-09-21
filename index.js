@@ -31,9 +31,13 @@ const askWithList = async (question, choices) => {
 const formatPath = (_path) => {
     return path.join(destinationPath, _path);
 }
+
+const libPath = (..._path) => {
+    return path.join(__dirname, ..._path);
+}
 const createAndCopy = (folder) => {
     fs.mkdirSync(formatPath(folder), { recursive: true });
-    fs.cpSync(`./copy/${folder}`, formatPath(folder), { recursive: true });
+    fs.cpSync(libPath('copy', folder), formatPath(folder), { recursive: true });
 }
 
 const main = async () => {
@@ -87,9 +91,9 @@ const main = async () => {
     });
 
     // copy hardhat.config.ts
-    fs.writeFileSync(formatPath('./hardhat.config.ts'), fs.readFileSync('./copy/hardhat.config.ts', 'utf8'));
-    fs.writeFileSync(formatPath('./tsconfig.json'), fs.readFileSync('./copy/tsconfig.json', 'utf8'));
-    fs.writeFileSync(formatPath('./.env'), fs.readFileSync('./copy/.env', 'utf8'));
+    fs.writeFileSync(formatPath('./hardhat.config.ts'), fs.readFileSync(libPath('copy','hardhat.config.ts'), 'utf8'));
+    fs.writeFileSync(formatPath('./tsconfig.json'), fs.readFileSync(libPath('copy','/tsconfig.json'), 'utf8'));
+    fs.writeFileSync(formatPath('./.env'), fs.readFileSync(libPath('copy','.env'), 'utf8'));
     createAndCopy('contracts');
     createAndCopy('scripts');
     createAndCopy('test');
